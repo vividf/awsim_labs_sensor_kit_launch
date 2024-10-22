@@ -59,6 +59,7 @@ def launch_setup(context, *args, **kwargs):
             result[x] = LaunchConfiguration(x)
         return result
 
+
     # Pointcloud preprocessor parameters
     filter_param = ParameterFile(
         param_file=LaunchConfiguration("filter_param_path").perform(context),
