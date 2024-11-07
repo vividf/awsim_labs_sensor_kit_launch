@@ -47,6 +47,7 @@ def launch_setup(context, *args, **kwargs):
                 "output_frame": LaunchConfiguration("base_frame"),
                 "input_twist_topic_type": "twist",
                 "publish_synchronized_pointcloud": True,
+                "timeout_sec": 0.01,
             }
         ],
         extra_arguments=[
