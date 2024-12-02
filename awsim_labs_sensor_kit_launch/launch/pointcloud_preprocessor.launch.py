@@ -65,7 +65,7 @@ def generate_launch_description():
     def add_launch_arg(name: str, default_value=None):
         launch_arguments.append(DeclareLaunchArgument(name, default_value=default_value))
 
-    awsim_labs_sensor_kit_launch_share_dir = get_package_share_directory("awsim_labs_sensor_kit_launch")
+    individual_params_share_dir = get_package_share_directory("individual_params")
 
     add_launch_arg("use_multithread", "False")
     add_launch_arg("use_intra_process", "False")
@@ -73,8 +73,8 @@ def generate_launch_description():
     add_launch_arg(
         "concatenate_and_time_sync_node_param_path",
         os.path.join(
-            awsim_labs_sensor_kit_launch_share_dir,
-            "config",
+            individual_params_share_dir,
+            "config/default/awsim_labs_sensor_kit",
             "concatenate_and_time_sync_node.param.yaml",
         ),
     )
